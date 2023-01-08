@@ -1,0 +1,223 @@
+* :before, :after{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+@font-face {
+    font-family:'OpenSans-Regular';
+    src: url(../fonts/OpenSans-Regular.ttf) format(truetype);
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family:'OpenSans-SemiBold';
+    src: url(../fonts/OpenSans-SemiBold.ttf) format(truetype);
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family:'OpenSans-Bold';
+    src: url(../fonts/OpenSans-Bold.ttf) format(truetype);
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+html {
+    font: 600 18px/22px 'OpenSans-SemiBold';      
+}
+
+body {
+    background: rgba(27, 34, 46, 1);  
+    max-width: 1440px; 
+    margin: auto;  
+}
+
+.container_grid {   
+    display: grid;    
+    grid-template-columns: 22.91% 1fr; 
+    grid-template-rows: 142px 220px 1fr 442px;   
+    grid-template-areas: 
+       "header header"
+       "banner banner"
+       "aside main"
+       "footer footer"
+}
+
+.main {
+    display:grid;
+    grid-template-columns: repeat(auto-fill, 232px);
+    grid-template-rows: repeat(3, 417px);
+    grid-gap: 31px 30px;
+    grid-area: main; 
+    margin: 60px 75px 420px 12px;
+}
+
+.header {
+    grid-area: header;
+    background-color: rgb(86, 88, 88);   
+}
+
+.banner {
+    grid-area: banner;
+    background-color: rgb(109, 106, 109);
+}
+
+.aside {
+    grid-area: aside;
+    background-color: rgb(128, 117, 118);    
+}
+
+.footer {
+    grid-area: footer;
+    background-color: rgb(88, 88, 86);
+}
+
+.card-item {
+    background: rgba(38, 42, 62, 1);
+    border-radius: 6px;
+    border: 1px solid #262A3E;
+    position: relative;    
+}
+
+.picture_name {
+    position: absolute;
+    left: 15px;
+    top: 140px;
+    color: #A782E9;
+    text-align: center;
+    padding-top: 4px;
+    background: rgba(167, 130, 233, 0.15);
+    border-radius: 4px;
+    width: 157px;
+    height: 24px;
+    font: 400 11px/16px 'OpenSans-Regular';
+}
+
+.description {
+    padding: 0 16px 5px 16px;
+}
+
+.label, .price, .button {
+    color: #fff;
+}
+
+.text {
+    color:#83878F;
+    font: 400 13px/17px 'OpenSans-Regular';
+}
+
+.price {
+    font: 700 24px/24px 'OpenSans-Bold';
+}
+
+.button {
+    display: flex;
+    text-decoration: none;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    height: 42px;
+    background: #29B474;
+    border: 1px solid rgba(41, 180, 116, 1);
+    border-radius: 6px;
+    font: 600 11px/20px 'OpenSans-SemiBold';
+}  
+
+.button:hover {
+    box-shadow: 5px 5px 5px greenyellow;
+    transform: scale(1.05);
+}
+
+.rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font: 700 12px/17px 'OpenSans-Bold';
+    color: #FFF;
+    margin-bottom: 15px;
+}
+
+.liner {
+    background-image: url(../image/Rating.png);
+    top: 5px;
+    width: 153px;
+    height: 4px;
+    align-content: center;
+}
+
+.stick {
+    position: relative;
+    top:-5px;       
+}
+
+[data-rating]::before {
+    content: attr(data-rating);
+}
+
+[data-rating='0.1'] {
+    left: 10%;
+}
+
+[data-rating='0.2'] {
+    left: 20%;
+}
+
+[data-rating='0.3'] {
+    left: 30%;
+}
+
+[data-rating='0.4'] {
+    left: 40%;
+}
+
+[data-rating='0.5'] {
+    left: 50%;
+}
+
+[data-rating='0.6'] {
+    left: 60%;
+}
+
+[data-rating='0.7'] {
+    left: 70%;
+}
+
+[data-rating='0.8'] {
+    left: 80%;
+}
+
+[data-rating='0.9'] {
+    left: 90%;
+}
+
+[data-rating='1'] {
+    left: 100%;
+}
+
+@media screen and (min-width: 1094px) and (max-width: 1250px) {
+    .container_grid {   
+        grid-template-columns: 22.91% 1fr; 
+        grid-template-rows: 100px 160px 1fr 350px;           
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1093px) {
+    .container_grid {   
+        grid-template-columns: 22.91% 1fr; 
+        grid-template-rows: 80px 120px 1fr 200px;           
+    }
+
+    .main {
+        grid-template-columns: repeat(auto-fill, 232px);
+        grid-template-rows: repeat(3, 417px);
+        grid-gap: 15px 15px;        
+        margin: 15px 20px 120px 12px;
+    }
+}
