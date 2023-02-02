@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Lesson-16</title>
+    <link rel="stylesheet" href="../lesson-16/css/style.css" type="text/css">
+  </head>
+  <body>
+    <form action="#" name="form" id="information" method="post" class="form">
+      <fieldset>
+        <legend>Информация о пользователе</legend>
+        <div class="items">
+        <span>Введите Ваше имя</span>                
+            <input type="text" name="name" autofocus class="field" placeholder="Иванов Иван" title="Фамилия и имя"> 
+        </div>
+        <div class="items">       
+        <span>Номер телефона</span>
+            <input  type="tel" name="phone" class="field" maxlength="15" placeholder="+xxx(xx)xxxxxxx" pattern="^\D*(?:\d\D*){12,}$" title="телефон">
+        </div> 
+        <div class="checkbox"> 
+          <input type="checkbox" checked name="agreement" class="checkbox" title="чекбокс">
+          <label>Я принимаю условия соглашения</label>
+        </div>  
+        <input type="submit" class="button">
+     </fieldset>
+    </form>  
+    <script src="../lesson-16/script/script.js"></script>
+  </body>
+</html>
